@@ -9,6 +9,7 @@ export default function CompatibilityPanel({
     selectedComponents,
     onSelectSuggestion,
     onReset,
+    onCheckout,
 }) {
     const { score, issues, warnings, strengths, selectedCount } = compatibility
     const [animateScore, setAnimateScore] = useState(false)
@@ -115,17 +116,8 @@ export default function CompatibilityPanel({
                 </div>
 
                 <div className="action-buttons">
-                    <button className="btn-primary" onClick={() => {
-                        const buildSummary = Object.entries(selectedComponents)
-                            .filter(([, v]) => v)
-                            .map(([k, v]) => `${k.toUpperCase()}: ${v.name} - ${formatPrice(v.price)}`)
-                            .join('\n')
-                        const total = formatPrice(totalPrice)
-                        const text = `PC Build - Semcomputer\n\n${buildSummary}\n\nTotal: ${total}\nCompatibility: ${score}%`
-                        navigator.clipboard?.writeText(text)
-                        alert('Build configuration copied to clipboard!')
-                    }}>
-                        <CopyIcon size={14} /> Confirm Build
+                    <button className="btn-primary" onClick={onCheckout} disabled={selectedCount === 0}>
+                        <CopyIcon size={14} /> Điền thông tin Confirm
                     </button>
                     <button className="btn-secondary" onClick={onReset}>
                         <RefreshIcon size={14} /> Reset

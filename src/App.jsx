@@ -7,6 +7,7 @@ import PresetBuilds from './components/PresetBuilds'
 import ComponentRow from './components/ComponentRow'
 import CompatibilityPanel from './components/CompatibilityPanel'
 import ComponentModal from './components/ComponentModal'
+import CheckoutModal from './components/CheckoutModal'
 import Footer from './components/Footer'
 import './index.css'
 
@@ -17,6 +18,7 @@ function App() {
     ssd: null, hdd: null, psu: null, cooling: null, case: null,
   })
   const [modalCategory, setModalCategory] = useState(null)
+  const [isCheckoutOpen, setIsCheckoutOpen] = useState(false)
 
   // Apply theme class to html element
   useEffect(() => {
@@ -109,6 +111,7 @@ function App() {
           selectedComponents={selectedComponents}
           onSelectSuggestion={handleSelectComponent}
           onReset={handleReset}
+          onCheckout={() => setIsCheckoutOpen(true)}
         />
       </div>
 
@@ -119,6 +122,14 @@ function App() {
           selectedComponents={selectedComponents}
           onSelect={(component) => handleSelectComponent(modalCategory, component)}
           onClose={handleCloseModal}
+        />
+      )}
+
+      {isCheckoutOpen && (
+        <CheckoutModal
+          selectedComponents={selectedComponents}
+          totalPrice={totalPrice}
+          onClose={() => setIsCheckoutOpen(false)}
         />
       )}
 

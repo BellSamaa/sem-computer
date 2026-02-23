@@ -889,7 +889,7 @@ export const presetBuilds = [
                 description: '(Intel Core Ultra 9 285K/ VGA RTX 5090)',
                 originalPrice: '207.820.000 ₫',
                 price: '188.880.000 ₫',
-                image: '/49b8c87e-6574-409e-91a3-763cfac8bbea.jpg',
+                image: '/pc-int-x-asus-blackwell.jpg',
                 components: {
                     cpu: 'cpu-4',
                     vga: 'vga-6',
@@ -907,7 +907,7 @@ export const presetBuilds = [
                 description: 'RTX 5060 Ti, RAM 16GB',
                 originalPrice: '33.500.000 ₫',
                 price: '31.900.000 ₫',
-                image: '/0ea16187-62ab-4952-8a25-8701ca64f567.jpg',
+                image: '/pc-infinity-i5-14400f.jpg',
                 components: {
                     cpu: 'cpu-1',
                     vga: 'vga-2',
@@ -966,7 +966,7 @@ export const presetBuilds = [
                 description: 'R3 3200G/ 8GB/ 256GB',
                 originalPrice: '8.400.000 ₫',
                 price: '7.290.000 ₫',
-                image: '/PIC1.jpg',
+                image: '/singpc-r33b482sf-w.webp',
                 components: {
                     cpu: 'cpu-8',
                     vga: 'vga-9',
@@ -984,7 +984,7 @@ export const presetBuilds = [
                 description: '/ VGA RX 6500XT (H610)',
                 originalPrice: '15.120.000 ₫',
                 price: '13.990.000 ₫',
-                image: '/67df74d3-9f52-4971-9355-269c65b5cab3.jpg',
+                image: '/pc-sem-intel-i5-12400f.png',
                 components: {
                     cpu: 'cpu-1',
                     vga: 'vga-9',

@@ -25,7 +25,7 @@ export default function CompatibilityPanel({
 
     const gaugeRadius = 80
     const gaugeCircumference = Math.PI * gaugeRadius
-    const gaugeFill = (score / 100) * gaugeCircumference
+    const gaugeFill = (Math.min(score, 95) / 95) * gaugeCircumference
 
     const scoreColor = useMemo(() => {
         if (score >= 80) return '#00e676'
@@ -102,7 +102,7 @@ export default function CompatibilityPanel({
                         <div
                             className="perf-bar-fill"
                             style={{
-                                width: `${selectedCount >= 2 ? score : 0}%`,
+                                width: `${selectedCount >= 2 ? Math.min(score, 95) / 0.95 : 0}%`,
                                 background: `linear-gradient(90deg, ${scoreColor}, ${scoreColor}88)`,
                             }}
                         />

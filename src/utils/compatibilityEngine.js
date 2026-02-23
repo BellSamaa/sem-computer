@@ -285,7 +285,7 @@ export function checkCompatibility(selectedComponents) {
 function calculateScore(issues, warnings, strengths, selectedCount) {
     if (selectedCount < 2) return 0;
 
-    let score = 100;
+    let score = 95;
 
     // Critical issues reduce score heavily
     score -= issues.length * 25;
@@ -300,7 +300,7 @@ function calculateScore(issues, warnings, strengths, selectedCount) {
     score += Math.min(selectedCount * 2, 18);
 
     // Clamp
-    return Math.max(0, Math.min(100, Math.round(score)));
+    return Math.max(0, Math.min(95, Math.round(score)));
 }
 
 /**

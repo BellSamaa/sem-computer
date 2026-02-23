@@ -878,86 +878,183 @@ export const allComponents = {
     case: caseData,
 };
 
-// Preset PC builds for suggestions
+// Preset PC builds for suggestions grouped by categories
 export const presetBuilds = [
     {
-        id: 'preset-gaming-budget',
-        name: 'Gaming Phổ Thông',
-        description: 'Chơi game Esport mượt mà, stream cơ bản',
-        budget: '~15 triệu',
-        components: {
-            cpu: 'cpu-8',    // Ryzen 5 5600X
-            vga: 'vga-9',    // GTX 1660 SUPER
-            mainboard: 'mb-8', // B550M DS3H
-            ram: 'ram-2',     // 16GB DDR4
-            ssd: 'ssd-1',     // 500GB NVMe
-            psu: 'psu-1',     // 550W Bronze
-            cooling: 'cool-5', // GAMMAXX 400
-            case: 'case-4',   // Q300L
-        }
+        category: 'For gamers',
+        items: [
+            {
+                id: 'preset-gamer-1',
+                name: 'PC INT x ASUS Blackwell',
+                description: '(Intel Core Ultra 9 285K/ VGA RTX 5090)',
+                originalPrice: '207.820.000 ₫',
+                price: '188.880.000 ₫',
+                image: '/PIC1.jpg',
+                components: {
+                    cpu: 'cpu-4',
+                    vga: 'vga-6',
+                    mainboard: 'mb-5',
+                    ram: 'ram-7',
+                    ssd: 'ssd-5',
+                    psu: 'psu-5',
+                    cooling: 'cool-4',
+                    case: 'case-6',
+                }
+            },
+            {
+                id: 'preset-gamer-2',
+                name: 'PC Infinity i5-14400F',
+                description: 'RTX 5060 Ti, RAM 16GB',
+                originalPrice: '33.500.000 ₫',
+                price: '31.900.000 ₫',
+                image: '/0ea16187-62ab-4952-8a25-8701ca64f567.jpg',
+                components: {
+                    cpu: 'cpu-1',
+                    vga: 'vga-2',
+                    mainboard: 'mb-2',
+                    ram: 'ram-2',
+                    ssd: 'ssd-1',
+                    psu: 'psu-2',
+                    cooling: 'cool-1',
+                    case: 'case-1',
+                }
+            },
+            {
+                id: 'preset-gamer-3',
+                name: 'PC Intel i3-12100F',
+                description: '/ VGA RX 6500XT',
+                originalPrice: '12.130.000 ₫',
+                price: '11.390.000 ₫',
+                image: '/49b8c87e-6574-409e-91a3-763cfac8bbea.jpg',
+                components: {
+                    cpu: 'cpu-9',
+                    vga: 'vga-9',
+                    mainboard: 'mb-1',
+                    ram: 'ram-1',
+                    ssd: 'ssd-6',
+                    psu: 'psu-1',
+                    cooling: 'cool-5',
+                    case: 'case-4',
+                }
+            }
+        ]
     },
     {
-        id: 'preset-gaming-mid',
-        name: 'Gaming Trung Cấp',
-        description: 'Full HD 144Hz, game AAA chất lượng cao',
-        budget: '~25 triệu',
-        components: {
-            cpu: 'cpu-1',    // i5-14400F
-            vga: 'vga-1',    // RTX 4060
-            mainboard: 'mb-2', // B760M DDR4
-            ram: 'ram-2',     // 16GB DDR4
-            ssd: 'ssd-3',     // 1TB NVMe
-            psu: 'psu-2',     // 650W Gold
-            cooling: 'cool-1', // AK400
-            case: 'case-1',   // H5 Flow
-        }
+        category: 'For students',
+        items: [
+            {
+                id: 'preset-student-1',
+                name: 'PC MSI PROJECT ZERO WHITE',
+                description: '(Intel i5-13400/ VGA RTX 5060)',
+                originalPrice: '38.220.000 ₫',
+                price: '34.690.000 ₫',
+                image: '/67df74d3-9f52-4971-9355-269c65b5cab3.jpg',
+                components: {
+                    cpu: 'cpu-2',
+                    vga: 'vga-1',
+                    mainboard: 'mb-3',
+                    ram: 'ram-4',
+                    ssd: 'ssd-3',
+                    psu: 'psu-2',
+                    cooling: 'cool-2',
+                    case: 'case-2',
+                }
+            },
+            {
+                id: 'preset-student-2',
+                name: 'SingPC R33B482SF-W',
+                description: 'R3 3200G/ 8GB/ 256GB',
+                originalPrice: '8.400.000 ₫',
+                price: '7.290.000 ₫',
+                image: '/dea94514-c444-4e28-936b-7142f5d28790.jpg',
+                components: {
+                    cpu: 'cpu-8',
+                    vga: 'vga-9',
+                    mainboard: 'mb-8',
+                    ram: 'ram-1',
+                    ssd: 'ssd-6',
+                    psu: 'psu-6',
+                    cooling: 'cool-5',
+                    case: 'case-4',
+                }
+            },
+            {
+                id: 'preset-student-3',
+                name: 'PC SEM Intel i5-12400F',
+                description: '/ VGA RX 6500XT (H610)',
+                originalPrice: '15.120.000 ₫',
+                price: '13.990.000 ₫',
+                image: '/f956befb-6b1d-487c-b88d-ad4a4527ba3a.jpg',
+                components: {
+                    cpu: 'cpu-1',
+                    vga: 'vga-9',
+                    mainboard: 'mb-1',
+                    ram: 'ram-2',
+                    ssd: 'ssd-1',
+                    psu: 'psu-1',
+                    cooling: 'cool-1',
+                    case: 'case-1',
+                }
+            }
+        ]
     },
     {
-        id: 'preset-gaming-high',
-        name: 'Gaming Cao Cấp',
-        description: '2K 144Hz, Ray Tracing, Stream chuyên nghiệp',
-        budget: '~40 triệu',
-        components: {
-            cpu: 'cpu-3',    // i7-14700KF
-            vga: 'vga-3',    // RTX 4070
-            mainboard: 'mb-4', // B760 TOMAHAWK DDR5
-            ram: 'ram-3',     // 32GB DDR5
-            ssd: 'ssd-2',     // 1TB 980 PRO
-            psu: 'psu-3',     // 750W Gold
-            cooling: 'cool-3', // Kraken X53
-            case: 'case-2',   // 4000D
-        }
-    },
-    {
-        id: 'preset-gaming-ultra',
-        name: 'Gaming Ultimate',
-        description: '4K Ultra, Ray Tracing, Content Creation',
-        budget: '~70 triệu',
-        components: {
-            cpu: 'cpu-4',    // i9-14900K
-            vga: 'vga-5',    // RTX 4080 SUPER
-            mainboard: 'mb-5', // ROG STRIX Z790
-            ram: 'ram-7',     // 64GB DDR5
-            ssd: 'ssd-5',     // 2TB 990 PRO
-            psu: 'psu-4',     // 850W Gold
-            cooling: 'cool-4', // H150i 360mm
-            case: 'case-3',   // O11 Dynamic EVO
-        }
-    },
-    {
-        id: 'preset-workstation',
-        name: 'Workstation',
-        description: 'Render video, 3D modeling, lập trình nặng',
-        budget: '~35 triệu',
-        components: {
-            cpu: 'cpu-7',    // Ryzen 9 7900X
-            vga: 'vga-1',    // RTX 4060
-            mainboard: 'mb-6', // B650 AORUS
-            ram: 'ram-7',     // 64GB DDR5
-            ssd: 'ssd-5',     // 2TB 990 PRO
-            psu: 'psu-3',     // 750W Gold
-            cooling: 'cool-6', // Kraken X73
-            case: 'case-5',   // 5000D
-        }
+        category: 'For designer',
+        items: [
+            {
+                id: 'preset-designer-1',
+                name: 'PC Intel Ultra 5 225F',
+                description: '/ VGA ARC B580 (DDR5)',
+                originalPrice: '35.637.000 ₫',
+                price: '32.599.000 ₫',
+                image: '/PIC1.jpg',
+                components: {
+                    cpu: 'cpu-5',
+                    vga: 'vga-7',
+                    mainboard: 'mb-6',
+                    ram: 'ram-5',
+                    ssd: 'ssd-1',
+                    psu: 'psu-2',
+                    cooling: 'cool-3',
+                    case: 'case-1',
+                }
+            },
+            {
+                id: 'preset-designer-2',
+                name: 'PC INT x MSI Dragon ACE',
+                description: '(Intel Core Ultra 9 285K/ VGA RTX 5090)',
+                originalPrice: '177.820.000 ₫',
+                price: '169.990.000 ₫',
+                image: '/0ea16187-62ab-4952-8a25-8701ca64f567.jpg',
+                components: {
+                    cpu: 'cpu-4',
+                    vga: 'vga-6',
+                    mainboard: 'mb-5',
+                    ram: 'ram-7',
+                    ssd: 'ssd-5',
+                    psu: 'psu-5',
+                    cooling: 'cool-4',
+                    case: 'case-3',
+                }
+            },
+            {
+                id: 'preset-designer-3',
+                name: 'PC Intel i7-14700F',
+                description: '/ VGA RTX 5080',
+                originalPrice: '73.320.000 ₫',
+                price: '71.390.000 ₫',
+                image: '/67df74d3-9f52-4971-9355-269c65b5cab3.jpg',
+                components: {
+                    cpu: 'cpu-3',
+                    vga: 'vga-5',
+                    mainboard: 'mb-4',
+                    ram: 'ram-6',
+                    ssd: 'ssd-2',
+                    psu: 'psu-4',
+                    cooling: 'cool-6',
+                    case: 'case-5',
+                }
+            }
+        ]
     },
 ];

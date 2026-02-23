@@ -63,11 +63,11 @@ export default function CompatibilityPanel({
             <div className={`score-card ${glowClass}`}>
                 <h3>Compatibility</h3>
 
-                {/* PC Image with dynamic glow */}
-                <div className={`score-pc-image ${pcImageGlow}`}>
+                {/* PC Image with RGB border */}
+                <div className={`score-pc-image rgb-border ${pcImageGlow}`}>
                     <img
-                        src="https://images.unsplash.com/photo-1587831990711-23ca6441447b?w=800&q=85"
-                        alt="Gaming PC Build"
+                        src="/PIC1.jpg"
+                        alt="Semcomputer PC Build"
                         loading="lazy"
                     />
                 </div>
